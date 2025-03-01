@@ -9,6 +9,8 @@ import argparse
 HOME = os.getcwd()
 print(HOME)
 
+import os
+os.environ['HF_HOME'] = f'{HOME}/hf_home/'
 
 
 parser = argparse.ArgumentParser(

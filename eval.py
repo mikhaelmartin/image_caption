@@ -7,6 +7,13 @@ from PIL import Image
 from IPython.display import display
 from transformers import AutoFeatureExtractor, AutoTokenizer, VisionEncoderDecoderModel
 
+HOME = os.getcwd()
+print(HOME)
+
+import os
+os.environ['HF_HOME'] = f'{HOME}/hf_home/'
+
+
 device = "cuda" if torch.cuda.is_available() else "cpu"
 image_encoder_model = "microsoft/swinv2-base-patch4-window12to16-192to256-22kto1k-ft"
 text_decoder_model = "gpt2"
